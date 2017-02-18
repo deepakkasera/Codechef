@@ -25,14 +25,10 @@ int main(int argc, char const *argv[])
     	    v2[v2.size()-1] = make_pair(min(v1[i].first,v2[v2.size()-1].first),max(v1[i].second,v2[v2.size()-1].second));
     	}
     	else v2.push_back(make_pair(v1[i].first,v1[i].second));
-
     }
     //for(int i=0;i<v2.size();i++) 
     //	cout << v2[i].first << " " <<v2[i].second << endl;
     for(int i=0;i<v2.size();i++){
-    	// cout << v2[i].first << " " << v2[i].second << endl;
-    	//if(v2[i].first < l) v2[i].first = l;
-    	//if(v2[i].second > r) v2[i].second = r;
     	if(v2[i].second < l) continue;
     	if(v2[i].first > r ) continue;
     	if(v2[i].first < l) v2[i].first = l; 
