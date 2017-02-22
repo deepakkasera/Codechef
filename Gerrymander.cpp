@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 bool func(int o1,int o2,int a[]){
-	int n=o1*o2;
+	int n=o1*o2 + o2;
 	int cumm[n+1];
 	cumm[0]=0;
 	for(int i=1;i<=n;i++){
@@ -25,17 +25,9 @@ int main(int argc, char const *argv[])
 	while(t--){
 		cin >> o1 >> o2;
 		n = o1*o2;
-		int a[n];
+		int a[n+o2];
 		for(int i=0;i<n;i++) cin >> a[i];
-		int b[9] = {1,0,0,1,1,0,1,0,0};
-		if(o1==3 && o2==3){
-			for(int i=0;i<9;i++){
-				if(a[i] != b[i]) goto label;
-			}
-			cout << "0" << endl;
-			continue;
-		}
-		label:
+		for(int i=n;i<n+o2;i++) a[i]=a[i-n]; 
 		if(func(o1,o2,a)) cout << "1" << endl;
 	    else cout << "0" << endl;
 	}
