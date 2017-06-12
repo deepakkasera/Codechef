@@ -11,7 +11,6 @@ int main(int argc, char const *argv[])
 	{
 		cin >> n >> q;
 		std::vector<int> v(n);
-		std::vector< pair<int,int> > vp(n);
 		for(int i=0;i<n;i++) cin >> v[i];
 		while(q--){
 			cin >> l >> r >> k;
@@ -29,10 +28,6 @@ int main(int argc, char const *argv[])
 				i+=x;
 				if(x>=k) cnt++;
 			}
-			// for(int i=0;i<v2.size();i++)
-			// {
-			// 	if(v2[i] >= k) cnt++;
-			// }
 			cout << cnt << endl;
 		}
 	}

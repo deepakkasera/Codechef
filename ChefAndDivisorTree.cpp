@@ -25,7 +25,7 @@ void sieveOfEratosthenes(int n){
 	return ;
 }
 
-map<int,int> factorizationlog(int n){
+std::vector<pair<int,int> > factorizationlog(int n){
 	for(int i=0;i<=n;i++)
 		minPrime[i] = 0;
 	int x = n;
@@ -43,10 +43,12 @@ map<int,int> factorizationlog(int n){
 		if(minPrime[i] == 0)
 			minPrime[i] =  i;
 	}
-	std::map<int,int> m;
+	//std::map<int,int> m;
+	std::vector<pair<int,int> > v;
 	while(n != 1){
 		res.push_back(minPrime[n]);
 		m[minPrime[n]]++;
+		v[]
 		n /= minPrime[n];
 	}
 	//cout << "minPrime is \n";
